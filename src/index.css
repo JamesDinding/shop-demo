@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 9;
+  background-color: #fff;
+}
+
+.centered {
+  margin: 3rem auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.focused {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+}
+
+.btn {
+  text-decoration: none;
+  background-color: rgb(251, 143, 2);
+  color: white;
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid rgb(251, 143, 2);
+  cursor: pointer;
+  margin: 2px;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: rgb(199, 117, 9);
+  border-color: rgb(199, 117, 9);
+}
+
+.btn--flat {
+  cursor: pointer;
+  font: inherit;
+  color: teal;
+  border: none;
+  background-color: none;
+  text-decoration: none;
+  padding: 0.65rem 1.5rem;
+  border-radius: 4px;
+}
+
+.btn--flat:hover,
+.bth--flat:active {
+  background-color: teal;
+  color: white;
+}
+
+.invalid {
+  background-color: rgb(251, 50, 50);
+}
+
+.popup {
+  display: block;
+}
+
+.nopopup {
+  display: none;
+}
+
+.success {
+  color: seagreen;
+  background-color: lawngreen;
+}
+
+.failure {
+  color: red;
+}
+
+.width-limit {
+  max-width: 40%;
+}

@@ -1,0 +1,40 @@
+.purchase {
+  position: fixed;
+  top: 20vh;
+  left: 30%;
+  width: 40%;
+  height: 40%;
+  z-index: 100;
+  overflow: auto;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.close {
+  position: absolute;
+  right: 5px;
+}
+
+.close:hover {
+  font-size: 1.1rem;
+}
+
+.title {
+  margin: 10px;
+}
+.inputbox {
+  display: block;
+  margin: 15px;
+  width: 20%;
+  border-radius: 4px;
+}
+
+.description {
+  margin: 10px;
+  font-size: 1.25rem;
+}
+.btn-container {
+  position: absolute;
+  left: 10px;
+  bottom: 15px;
+}
