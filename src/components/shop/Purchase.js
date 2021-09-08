@@ -20,7 +20,7 @@ const PurchaseModal = (props) => {
 
   return (
     <form onSubmit={subbmitHandler} className={classes.purchase}>
-      <span onClick={props.onShut()} className={classes.close}>
+      <span onClick={props.onShut} className={classes.close}>
         Ｘ
       </span>
       <div>
