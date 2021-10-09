@@ -22,30 +22,37 @@ const UploadProduct = () => {
 
   const [uploadNow, setUploadNow] = useState(false);
 
+  const product_name = nameRef.current.value;
+  const product_price = priceRef.current.value;
+  const product_url = urlRef.current.value;
+  const remaining_num = numRef.current.value;
+
   useEffect(() => {
     if (uploadNow) {
       sendRequest({
-        product_name: nameRef.current.value,
-        product_price: priceRef.current.value,
-        product_url: urlRef.current.value,
-        remaining_num: numRef.current.value,
+        product_name,
+        product_price,
+        product_url,
+        remaining_num,
         product_seller: {
           seller_name: "none",
           seller_account: authCtx.email,
         },
       });
-      console.log(
-        nameRef.current.value,
-        priceRef.current.value,
-        urlRef.current.value,
-        numRef.current.value,
-        authCtx.email
-      );
       nameRef.current.value = "";
       setUploadNow(false);
       setResponseStatus(true);
     }
-  }, [uploadNow, sendRequest, setUploadNow, setResponseStatus]);
+  }, [
+    uploadNow,
+    sendRequest,
+    setUploadNow,
+    setResponseStatus,
+    product_name,
+    product_price,
+    product_url,
+    remaining_num,
+  ]);
 
   const submitHandler = (event) => {
     event.preventDefault();
