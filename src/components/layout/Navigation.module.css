@@ -63,11 +63,11 @@ nav a {
   z-index: 10;
   visibility: hidden;
   background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  border: 0.15rem solid rgba(0, 0, 0, 0.06);
   border-radius: 2px;
   box-sizing: border-box;
   max-width: 100px;
-  margin: 10px;
+  margin: 15px;
 }
 
 .show {
