@@ -22,11 +22,12 @@ const UploadProduct = () => {
 
   const [uploadNow, setUploadNow] = useState(false);
 
-  const product_name = nameRef.current.value;
-  const product_price = priceRef.current.value;
-  const product_url = urlRef.current.value;
-  const remaining_num = numRef.current.value;
+  const product_name = nameRef.current?.value;
+  const product_price = priceRef.current?.value;
+  const product_url = urlRef.current?.value;
+  const remaining_num = numRef.current?.value;
 
+  console.log(product_name, "product_name");
   useEffect(() => {
     if (uploadNow) {
       sendRequest({
@@ -52,6 +53,7 @@ const UploadProduct = () => {
     product_price,
     product_url,
     remaining_num,
+    authCtx.email,
   ]);
 
   const submitHandler = (event) => {

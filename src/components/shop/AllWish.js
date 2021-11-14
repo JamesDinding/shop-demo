@@ -67,21 +67,21 @@ const AllWish = () => {
                     {cur.remaining_num}
                   </span>
                 </div>
-                <div id={cur.id}>
-                  <button onClick={popPurchaseHandler} className="btn">
+                <div id={cur.id} className={classes["btn-container"]}>
+                  <button
+                    onClick={popPurchaseHandler}
+                    className={`btn ${classes.purchaseBtn}`}
+                  >
                     Purchase
                   </button>
-                  <button onClick={addToWishHandler} className={classes.wish}>
+                  <button
+                    onClick={addToWishHandler}
+                    className={classes.wishbtn}
+                  >
                     {authCtx.wish.find((el) => el.id === cur.id) ? (
-                      <img
-                        className={classes.heart}
-                        src="/img/iconmonstr-favorite-3-24.png"
-                      />
+                      <img alt="❤" src="/img/iconmonstr-favorite-3-24.png" />
                     ) : (
-                      <img
-                        className={classes.heart}
-                        src="/img/iconmonstr-heart-thin-24.png"
-                      />
+                      <img alt="💔" src="/img/iconmonstr-heart-thin-24.png" />
                     )}
                   </button>
                 </div>

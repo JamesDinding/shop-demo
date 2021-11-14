@@ -47,7 +47,7 @@ nav a {
   margin-left: 1rem;
   font-size: 1.2rem;
   text-decoration: none;
-  margin: 1rem;
+  margin: 0 1rem;
   color: #88dfdf;
   cursor: pointer;
   background: none;
@@ -59,31 +59,60 @@ nav a {
 }
 
 .drop-container {
-  position: fixed;
+  position: absolute;
   z-index: 10;
+  left: -30px;
   visibility: hidden;
   background-color: #fff;
   border: 0.15rem solid rgba(0, 0, 0, 0.06);
   border-radius: 2px;
   box-sizing: border-box;
-  max-width: 100px;
+  max-width: 120px;
   margin: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .show {
   visibility: visible;
 }
 
+.wish {
+  position: relative;
+}
+
 .emptywish {
   font-size: 16px;
   margin: 7px;
+  padding: 7px;
 }
 
 .wish-item {
-  height: 80px;
-  width: 80px;
+  height: 120px;
+  width: 120px;
+  padding: 15px;
 }
 
 .wish-item:hover {
   cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  nav a {
+    font-size: 1rem;
+    margin-left: 0.25rem;
+  }
+
+  .logout {
+    font-size: 1rem;
+    text-decoration: none;
+    margin-left: 0.25rem;
+    color: #88dfdf;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+
+  .show {
+    display: none;
+  }
 }

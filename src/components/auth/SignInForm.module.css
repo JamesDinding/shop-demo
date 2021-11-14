@@ -1,6 +1,6 @@
 .form {
   position: relative;
-  max-width:400px;
+  max-width: 400px;
 }
 
 .invalid {
@@ -61,4 +61,7 @@
 .signup:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
 }

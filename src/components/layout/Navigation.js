@@ -33,9 +33,9 @@ const Navigation = () => {
         <Link to="/add-product">Upload</Link>
       </li>
       <li>
-        <a className={classes.logout} onClick={logoutHandler}>
+        <button className={classes.logout} onClick={logoutHandler}>
           Out
-        </a>
+        </button>
       </li>
     </Fragment>
   );
@@ -60,29 +60,32 @@ const Navigation = () => {
           <li>
             <Link to="/products">Shop</Link>
           </li>
-          <li onMouseEnter={showWishHandler} onMouseLeave={closeWishHandler}>
-            <Link to="/wish">Wish</Link>
-            <div
-              className={showWishCss}
-              onMouseEnter={showWishHandler}
-              onMouseLeave={closeWishHandler}
-            >
-              {authCtx.wish.length === 0 ? (
-                <span className={classes.emptywish}>去逛逛!</span>
-              ) : (
-                authCtx.wish.map((cur, index, arr) => {
-                  return (
-                    <div
-                      key={index}
-                      className={classes["wish-item"]}
-                      id={cur.id}
-                      onClick={leadToWishPageHandler}
-                    >
-                      <img src={cur.product_url} />
-                    </div>
-                  );
-                })
-              )}
+          <li onMouseEnter={showWishHandler}>
+            <div className={classes.wish}>
+              <Link to="/wish">Wish</Link>
+
+              <div
+                className={showWishCss}
+                onMouseEnter={showWishHandler}
+                onMouseLeave={closeWishHandler}
+              >
+                {authCtx.wish.length === 0 ? (
+                  <span className={classes.emptywish}>去逛逛!</span>
+                ) : (
+                  authCtx.wish.map((cur, index, arr) => {
+                    return (
+                      <div
+                        key={index}
+                        className={classes["wish-item"]}
+                        id={cur.id}
+                        onClick={leadToWishPageHandler}
+                      >
+                        <img src={cur.product_url} alt="pic not found💩" />
+                      </div>
+                    );
+                  })
+                )}
+              </div>
             </div>
           </li>
           {authCtx.isLoggedIn ? logoutHtml : loginHtml}

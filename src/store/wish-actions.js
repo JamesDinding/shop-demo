@@ -1,6 +1,7 @@
 import { wishActions } from "./wish-slice";
 import { uiActions } from "./ui-slice";
 
+//actions creator thunk
 export const fetchWishData = () => {
   return async (dispatch) => {
     const fecthData = async () => {

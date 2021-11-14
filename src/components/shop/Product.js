@@ -1,5 +1,6 @@
 import React, { useState, useEffect, Fragment, useContext } from "react";
 import AuthContext from "../../store/auth-context";
+
 import Purchase from "./Purchase";
 import useHttp from "../../hooks/use-http";
 import { getAllProducts } from "../../lib/api";
@@ -73,31 +74,27 @@ const Product = () => {
                   {cur.product_name}
                 </div>
                 <div className={classes["price-container"]}>
-                  價格:
                   <span className={classes["price-price"]}>
-                    {cur.product_price}
+                    {`價格:${cur.product_price}`}
                   </span>
-                  剩餘數量:
-                  <span className={classes["remaining-num"]}>
-                    {cur.remaining_num}
-                  </span>
+                  <span>{`剩餘數量:${cur.remaining_num}`}</span>
                 </div>
-                <div id={cur.id}>
-                  <button onClick={popPurchaseHandler} className="btn">
+                <div id={cur.id} className={classes["btn-container"]}>
+                  <button
+                    onClick={popPurchaseHandler}
+                    className={`btn ${classes.purchaseBtn}`}
+                  >
                     Purchase
                   </button>
 
-                  <button onClick={addToWishHandler} className={classes.wish}>
+                  <button
+                    onClick={addToWishHandler}
+                    className={classes.wishbtn}
+                  >
                     {authCtx.wish.find((el) => el.id === cur.id) ? (
-                      <img
-                        className={classes.heart}
-                        src="/img/iconmonstr-favorite-3-24.png"
-                      />
+                      <img src="/img/iconmonstr-favorite-3-24.png" alt="❤" />
                     ) : (
-                      <img
-                        className={classes.heart}
-                        src="/img/iconmonstr-heart-thin-24.png"
-                      />
+                      <img src="/img/iconmonstr-heart-thin-24.png" alt="💔" />
                     )}
                   </button>
                 </div>

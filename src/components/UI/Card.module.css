@@ -7,3 +7,9 @@
   max-width: 40%;
   margin: auto;
 }
+
+@media screen and (max-width: 768px) {
+  .card {
+    max-width: 90%;
+  }
+}
