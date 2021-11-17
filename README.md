@@ -1,31 +1,21 @@
 https://shop-90fe6.web.app/products
 
-使用react-router-dom來製作的SPA
+# **專案**
+這專案是React實作簡易的購物網站，雖然不比真正的購物網站，不過還是有基本的呈現(RWD、SPA)。
+後端用的是firebase的rest api來完成。
 
-算是簡單模仿小購物網站，雖然很不美觀就是了。是以react hooks開發。
+# **使用的技術**
+hooks，使用useContext來完成auth，包括使用custom hook來處理ajax code以及createPortal來產生購買頁面等。
+ 
+react-router，用來routing，幫助製作SPA。用flex、@media來製作RWD，讓畫面可以在其他裝置有一定程度的呈現。
 
-以firebase作為簡單的後端，幫忙存商品資料，Firebase Auth rest api來處理sign in/up。
+# **中途遇到的問題**
+一開始對RWD還沒有甚麼認識，所以也沒有特別注意，自己的成品難以在行動裝置上呈現。
+後來才追加一些media query來完成。
 
-useHttp是custom hook，用useReducer處理fetch、asycn/await的部分，依照response來dispatch action。
+完成專案後也更加認識的自己的不足。
 
-到首頁，useEffect會使用的上述的useHttp所提供的sendRequest來fetch商品資料。
+# **可以改進的部分**
+這個專案的資料並不太需要在component傳遞，所以只用props和useContext，未來如果有更大的專案，用Redux來應該比較好。
 
-商品就簡單地用flex呈現了，點選愛心則是加入願望清單。游標移到wish是顯示現在關注的商品的圖片。
-
-登入頁面是用useRef來選取輸入的帳號密碼。
-
-用useContext來存auth的idtoken等資訊，用localStorage存idtoken，重新整理時可以維持登入。wish並沒有存下來。
-
-upload則是上傳商品的頁面，登入後才會顯示。
-
-購買頁面沒有額外寫一個page來呈現，而是用ReactDOM.createPortal直接產生Modal來當作購買頁面。
-
-而錯誤的網址則會到Not Found的頁面。
-
-而此作品也就做到這了。
-
-懶得sign up的話
-測試的帳號密碼
-test1234@test.com
-test1234
-
+react-router現在也更新到v6，之後可能可以改一下。
