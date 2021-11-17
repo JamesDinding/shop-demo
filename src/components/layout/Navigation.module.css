@@ -44,10 +44,10 @@ nav a {
 
 .logout {
   position: relative;
-  margin-left: 1rem;
   font-size: 1.2rem;
   text-decoration: none;
-  margin: 0 1rem;
+  margin: 0 4px;
+
   color: #88dfdf;
   cursor: pointer;
   background: none;
@@ -105,14 +105,18 @@ nav a {
   .logout {
     font-size: 1rem;
     text-decoration: none;
-    margin-left: 0.25rem;
     color: #88dfdf;
     cursor: pointer;
     background: none;
     border: none;
+    margin-left: auto;
   }
 
   .show {
     display: none;
+  }
+
+  nav li {
+    margin: 0 0;
   }
 }
