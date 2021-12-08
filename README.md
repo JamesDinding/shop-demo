@@ -1,5 +1,10 @@
 https://shop-90fe6.web.app/products
 
+# 測試用的帳號密碼
+> account : test1234@test.com
+> 
+> password : test1234
+
 # **專案**
 這專案是React實作簡易的購物網站，雖然不比真正的購物網站，不過還是有基本的呈現(RWD、SPA)。
 後端用的是firebase的rest api來完成。
